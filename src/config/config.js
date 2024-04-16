@@ -4,6 +4,6 @@ export default {
   default: {
       baseUrl: BASE_URL,
     // userList
-    UserList: BASE_URL + "/list-users",
+    userList: BASE_URL + "/list-users",
   },
 };

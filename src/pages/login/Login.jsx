@@ -3,11 +3,16 @@ import styles from './login.module.scss';
 import logo from "../../assets/images/logo.png"
 import {EmailIcon, PasswordIcon } from '../../assets/SvgComponents';
 import Button from '../../components/button/Button';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => { localStorage.setItem("Email", email); }
+  const handleLogin = () => {
+    localStorage.setItem("Email", email);
+    navigate("/user-list");
+  }
     
    
   return (
